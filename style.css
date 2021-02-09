@@ -142,4 +142,32 @@ legend {
     flex: 0 0 320px;
     border: 2px solid gray;
     margin-bottom: 20px;
+    position: relative;
+}
+
+#card-title
+{
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid gray;
+}
+
+#card-content
+{
+    padding: 10px;
+}
+
+#card-del-button
+{
+    cursor: pointer;
+    background-color: #d9534f;
+    color: #f7f7f7;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #d9534f;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
 }
