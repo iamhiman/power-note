@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================================
+                      Navbar
+================================================== */
+
+#navbar
+{
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+#logo
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#search-input
+{
+    outline: none;
+}
+
+#delete-all-btn{
+    background: #d9534f;
+    color: #f7f7f7;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* ==================================================
+                    Add Note Form
+================================================== */
+
+.add-note-form{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+fieldset {
+    background-color: #eeeeee;
+}
+
+legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.form-group
+{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}  
+
+.form-group label
+{
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-bottom: 5px;
+}
+
+.form-group input
+{
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.form-group textarea
+{
+    resize: none;
+    width: 80%;
+    font-size: 18px;
+    margin-bottom: 80px;
+}
+
+#add-note-btn
+{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    outline: none;
+    border: 2px solid green;
+    background-color: #5cb85c;
+    color: #f7f7f7;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    bottom: 10px;
+    right: 10%;
+}
+
+/* ==================================================
+                    Note Cards DOM
+================================================== */
+
+#main-box
+{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+#main-box h1
+{
+    text-align: center;
+}
+
+#notes-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#note-card
+{
+    flex: 0 0 320px;
+    border: 2px solid gray;
+    margin-bottom: 20px;
+}
