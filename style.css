@@ -85,6 +85,7 @@ legend {
     width: 80%;
     margin-bottom: 10px;
     font-size: 18px;
+    outline: none;
 }
 
 .form-group textarea
@@ -92,7 +93,8 @@ legend {
     resize: none;
     width: 80%;
     font-size: 18px;
-    margin-bottom: 80px;
+    margin-bottom: 65px;
+    outline: none;
 }
 
 #add-note-btn
@@ -109,6 +111,12 @@ legend {
     position: absolute;
     bottom: 10px;
     right: 10%;
+}
+
+#error{
+    background: #f44336;
+    color: #fff;
+    font-weight: bold;
 }
 
 /* ==================================================
@@ -139,14 +147,20 @@ legend {
 
 #note-card
 {
-    flex: 0 0 320px;
+    width: 320px;
     border: 2px solid gray;
     margin-bottom: 20px;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 20px;
 }
 
 #card-title
 {
+    width: 320px;
+    word-wrap: break-word;
     font-weight: bold;
     text-align: center;
     border-bottom: 2px solid gray;
@@ -155,9 +169,11 @@ legend {
 #card-content
 {
     padding: 10px;
+    word-wrap: break-word;
+    width: 320px;
 }
 
-#card-del-button
+.card-del-button
 {
     cursor: pointer;
     background-color: #d9534f;

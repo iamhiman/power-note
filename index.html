@@ -24,40 +24,34 @@
         <button type="submit" id="delete-all-btn"><i class="fas fa-trash-alt"></i> Delete All </button>
     </nav>
 
-    <form action="#" autocomplete="off" class="add-note-form">
+    <div  class="add-note-form">
         <fieldset>
             <legend>Add Note:</legend>
 
             <div class="form-group">
                 <label for="title">Note Title: </label>
-                <input type="text" id="title" name="title">
+                <input type="text" id="title" name="title" required>
             </div>
 
             <div class="form-group">
                 <label for="content">Note Content: </label>
-                <textarea name="message" id="content" rows="10" cols="30"></textarea>
+                <textarea name="message" id="content" rows="10" cols="30" required></textarea>
+                <span id="error"></span>
             </div>
-
-            <button type="submit" id="add-note-btn"><i class="fas fa-plus"></i></button>
+            
+            <button id="add-note-btn"><i class="fas fa-plus"></i></button>
         </fieldset>
-    </form>
+    </div>
 
     <div class="main-box" id="main-box">
         <hr>
         <h1>Your Notes: </h1>
         <hr>
 
-        <div id="notes-container" class="notes-container">
-            <div id="note-card">
-                <p id="card-title">lorem ipsum</p>
-                <p id="card-content"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint enim tempora fugiat impedit accusamus! Laboriosam tempora consequatur illum pariatur amet vel eligendi voluptas, animi esse, ut cupiditate inventore, architecto ipsam!         </p>
-                <button type="submit" id="card-del-button"><i class="fas fa-trash-alt"></i></button>
-            </div>
-
+        <div id="notes-container" class="notes-container"> 
         </div>
 
     </div>
-
 
     <script src="script.js"></script>
 </body>
