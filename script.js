@@ -15,7 +15,6 @@ function clearError(id)
 }
 
 //Checking if there are any notes stored in the localstorage
-
 function checkStorage()
 {
   let notesStorage = localStorage.getItem("notes");
@@ -114,4 +113,15 @@ yesDelete.addEventListener("click", function(index){
   localStorage.setItem("notes", JSON.stringify(notesArray));
   modalBg.classList.remove("bg-active");
   displayNotes();
+});
+
+
+/********Delete All Notes Function*******/
+let deleteAll = document.getElementById("delete-all-btn");
+deleteAll.addEventListener("click",()=>{
+  //console.log("Clicked");
+  localStorage.clear();
+  notesArray.splice(0,notesArray.length);
+  let notesDomElement = document.getElementById("notes-container");
+  notesDomElement.innerText = `Section is empty! Use "Add Note" section above to add notes.`;
 });
