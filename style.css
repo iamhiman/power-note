@@ -20,9 +20,9 @@ html{
     display: flex;
     height: 60px;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
     -webkit-box-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -79,11 +79,11 @@ legend {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
     -webkit-box-pack: center;
-            justify-content: center;   
+    justify-content: center;   
 }  
 
 .form-group label
@@ -155,7 +155,7 @@ legend {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-            flex-direction: row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 10px;
@@ -173,7 +173,7 @@ legend {
     flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
     margin-right: 20px;
 }
 
@@ -188,9 +188,9 @@ legend {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
 }
 
 #card-content
@@ -233,9 +233,9 @@ legend {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: visibility 0s, opacity 0.5s;
@@ -257,10 +257,10 @@ legend {
     display: flex;
     justify-content: space-around;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
     flex-wrap: wrap;
     border: 2px solid blue;
 }
@@ -273,9 +273,9 @@ legend {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
 }
 
 .modal-close
@@ -322,9 +322,9 @@ legend {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: visibility 0s, opacity 0.5s;
@@ -346,10 +346,10 @@ legend {
     display: flex;
     justify-content: space-around;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
     flex-wrap: wrap;
     border: 2px solid blue;
 }
@@ -363,9 +363,9 @@ legend {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
     -webkit-box-align: center;
-            align-items: center;
+    align-items: center;
 }
 
 .nav-modal-close
