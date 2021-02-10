@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+html{
+    overflow-x: hidden;
+}
 /* ==================================================
                       Navbar
 ================================================== */
@@ -148,6 +151,7 @@ legend {
 #note-card
 {
     width: 320px;
+    height: 320px;
     border: 2px solid gray;
     margin-bottom: 20px;
     position: relative;
@@ -164,13 +168,18 @@ legend {
     font-weight: bold;
     text-align: center;
     border-bottom: 2px solid gray;
+    z-index: 9999;
 }
 
 #card-content
 {
-    padding: 10px;
     word-wrap: break-word;
-    width: 320px;
+    width: 310px;
+    height: 280px;
+    overflow: scroll;
+    z-index: 9;
+    margin-left: 5px;
+
 }
 
 .card-del-button
@@ -186,4 +195,6 @@ legend {
     position: absolute;
     right: 5px;
     bottom: 5px;
+    z-index: 99;
 }
+
