@@ -21,6 +21,7 @@ function checkStorage()
   if (notesStorage == null) 
   {
     notesArray = [];
+    return true;
   } 
   else 
   {
@@ -122,7 +123,10 @@ let navYesDelete = document.getElementById("nav-yes-delete");
 let navDontDelete = document.getElementById("nav-no-delete");
 let deleteAll = document.getElementById("delete-all-btn");
 deleteAll.addEventListener("click",()=>{
-  navModalBg.classList.add("bg-active");
+  if(notesArray.length !== 0)
+  {
+    navModalBg.classList.add("bg-active");
+  }
 });
 
 navDontDelete.addEventListener("click", function(){
