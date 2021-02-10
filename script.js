@@ -117,11 +117,23 @@ yesDelete.addEventListener("click", function(index){
 
 
 /********Delete All Notes Function*******/
+let navModalBg = document.querySelector(".nav-modal-bg");
+let navYesDelete = document.getElementById("nav-yes-delete");
+let navDontDelete = document.getElementById("nav-no-delete");
 let deleteAll = document.getElementById("delete-all-btn");
 deleteAll.addEventListener("click",()=>{
-  //console.log("Clicked");
+  navModalBg.classList.add("bg-active");
+});
+
+navDontDelete.addEventListener("click", function(){
+  navModalBg.classList.remove("bg-active");
+});
+
+navYesDelete.addEventListener("click", function(){
+  checkStorage();
   localStorage.clear();
   notesArray.splice(0,notesArray.length);
+  navModalBg.classList.remove("bg-active");
   let notesDomElement = document.getElementById("notes-container");
   notesDomElement.innerText = `Section is empty! Use "Add Note" section above to add notes.`;
 });
