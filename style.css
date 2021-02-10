@@ -168,7 +168,6 @@ legend {
     font-weight: bold;
     text-align: center;
     border-bottom: 2px solid gray;
-    z-index: 9999;
 }
 
 #card-content
@@ -177,9 +176,8 @@ legend {
     width: 310px;
     height: 280px;
     overflow: scroll;
-    z-index: 9;
     margin-left: 5px;
-
+    margin-top: 5px;
 }
 
 .card-del-button
@@ -195,6 +193,5 @@ legend {
     position: absolute;
     right: 5px;
     bottom: 5px;
-    z-index: 99;
 }
 
