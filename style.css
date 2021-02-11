@@ -353,6 +353,36 @@ legend {
 
 
 /* ==================================================
+                View Code Card
+================================================== */
+
+.view-code
+{
+    width: 105px;
+    height: 25px;
+    background-color: black;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-code a{
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+}
+
+.fa-github
+{
+    font-size: 20px;
+}
+
+
+/* ==================================================
                 Responsive Design
 ================================================== */
 
