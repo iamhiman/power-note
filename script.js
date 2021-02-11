@@ -14,20 +14,19 @@ function clearError(id)
   errormsg.innerText = "";
 }
 
-//Checking if there are any notes stored in the localstorage
 function checkStorage()
 {
+  //Checking if there are any notes stored in the localstorage
   let notesStorage = localStorage.getItem("notes");
   if (notesStorage == null) 
   {
     notesArray = [];
-    return true;
   } 
   else 
   {
     //If notes are found, we store them in array of objects as well
     notesArray = JSON.parse(notesStorage);
-  }
+  }  
 }
 
 
@@ -38,10 +37,11 @@ function displayNotes(){
   //appending the note-card in DOM
   let html = "";
   notesArray.forEach(function(element, index){
-  html += `<div id="note-card">
+  html += `<div id="note-card" class="note-card">
               <p id="card-title"> ${element.title} </p>
               <p id="card-content"> ${element.content} </p>
               <button type="submit" id="${index}" onclick="deleteNote(this.id)" class="card-del-button"><i class="fas fa-trash-alt"></i></button>
+              <button type="submit" id="${index}" onclick="editNote(this.id)" class="card-edit-button"><i class="fas fa-edit"></i></button>
            </div>`;
   });  
 
@@ -92,29 +92,14 @@ addButton.addEventListener("click", () =>{
 
 
 /********Delete Note Function*******/
-let modalBg = document.querySelector(".modal-bg");
-let yesDelete = document.getElementById("yes-delete");
-let dontDelete = document.getElementById("no-delete");
-
 function deleteNote(index)
 {
-  //console.log("Delete triggered", index);
-  modalBg.classList.add("bg-active");
-}
-
-dontDelete.addEventListener("click", function(){
-  modalBg.classList.remove("bg-active");
-});
-
-yesDelete.addEventListener("click", function(index){
-  //console.log("yes", index);
   checkStorage();
 
   notesArray.splice(index, 1);
   localStorage.setItem("notes", JSON.stringify(notesArray));
-  modalBg.classList.remove("bg-active");
   displayNotes();
-});
+}
 
 
 /********Delete All Notes Function*******/
@@ -135,9 +120,40 @@ navDontDelete.addEventListener("click", function(){
 
 navYesDelete.addEventListener("click", function(){
   checkStorage();
+
   localStorage.clear();
   notesArray.splice(0,notesArray.length);
   navModalBg.classList.remove("bg-active");
   let notesDomElement = document.getElementById("notes-container");
   notesDomElement.innerText = `Section is empty! Use "Add Note" section above to add notes.`;
 });
+
+
+/********Search Function*******/
+function searchFunction()
+{
+  let input = document.getElementById("search-input");
+  let filter = input.value.toUpperCase();
+  let notesContainer = document.getElementById("notes-container");
+  let notes = notesContainer.getElementsByClassName("note-card");
+
+  for(i=0; i<notes.length; i++)
+  {
+    let titleContainer = notes[i].getElementsByTagName("p")[0];
+    let cardContainer = notes[i].getElementsByTagName("p")[1];
+
+    if(cardContainer || titleContainer)
+    {
+      let titleContent = titleContainer.textContent || titleContainer.innerText;
+      let cardContent = cardContainer.textContent || cardContainer.innerText;
+      if(titleContent.toUpperCase().indexOf(filter) > -1 || cardContent.toUpperCase().indexOf(filter) > -1)
+      {
+        notes[i].style.display = "";
+      }
+      else
+      {
+        notes[i].style.display = "none";
+      }
+    }    
+  }
+}

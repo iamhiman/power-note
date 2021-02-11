@@ -18,7 +18,7 @@
         <p id="logo">Power Note</p>
 
         <form action="#" autocomplete="off">
-            <input type="text" id="search-input" name="search">
+            <input type="text" id="search-input" name="search" onkeyup="searchFunction()" placeholder="Search...">
         </form>
 
         <button type="submit" id="delete-all-btn"><i class="fas fa-trash-alt"></i> Delete All </button>
@@ -60,16 +60,6 @@
         <div id="notes-container"> 
         </div>
     </div>
-
-    <div class="modal-bg">
-        <div class="modal">
-           <p>Note will be deleted permanently. Are you sure?</p>
-           <div class=modal-btn>
-               <button id="yes-delete"><i class="fas fa-check"></i> Yes</button>
-               <button id="no-delete"><i class="fas fa-times"></i> No</button>
-           </div>    
-        </div>
-       </div>
 
     <script src="script.js"></script>
 </body>

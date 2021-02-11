@@ -138,10 +138,10 @@ legend {
 
 #main-box
 {
-    max-width: 1100px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 #main-box h1
@@ -158,13 +158,13 @@ legend {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 #note-card
 {
-    width: 320px;
-    height: 320px;
+    width: 260px;
+    height: 270px;
     border: 2px solid gray;
     margin-bottom: 20px;
     position: relative;
@@ -175,11 +175,12 @@ legend {
     -webkit-box-direction: normal;
     flex-direction: column;
     margin-right: 20px;
+    background-color: #eeeeee;
 }
 
 #card-title
 {
-    width: 320px;
+    width: 257px;
     word-wrap: break-word;
     font-weight: bold;
     text-align: center;
@@ -191,15 +192,17 @@ legend {
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
+    font-size: 15px;
 }
 
 #card-content
 {
     word-wrap: break-word;
-    width: 310px;
-    height: 240px;
+    width: 250px;
+    height: 200px;
     overflow: scroll;
     margin-left: 5px;
+    font-size: 15px;
 }
 
 .card-del-button
@@ -207,8 +210,9 @@ legend {
     cursor: pointer;
     background-color: #d9534f;
     color: #f7f7f7;
-    height: 40px;
-    width: 40px;
+    height: 32px;
+    width: 32px;
+    font-size: 15px;
     border-radius: 50%;
     outline: none;
     border: 1px solid #d9534f;
@@ -217,93 +221,20 @@ legend {
     bottom: 5px;
 }
 
-
-/* ==================================================
-                    Modal
-================================================== */
-
-.modal-bg
+.card-edit-button
 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.5);
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: visibility 0s, opacity 0.5s;
-    transition: visibility 0s, opacity 0.5s; 
-    z-index: 999999;
-}
-
-.bg-active{
-    visibility: visible;
-    opacity: 1;
-}
-
-.modal{
-    position: relative;
-    background-color: white;
-    width: 50%;
-    height: 25%;
-    display: -webkit-box;
-    display: flex;
-    justify-content: space-around;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    flex-wrap: wrap;
-    border: 2px solid blue;
-}
-
-.modal p{
-    padding: 10px;
-}
-
-.modal-btn{
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-}
-
-.modal-close
-{
+    cursor: pointer;
+    background-color: #0275d8; 
+    color: #f7f7f7;
+    height: 32px;
+    width: 32px;
+    font-size: 15px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid #0275d8 ;
     position: absolute;
-    top: 5px;
-    right: 5px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#yes-delete
-{
-    margin-right: 10px;
-    background-color: #5cb85c;
-    padding: 8px 15px;
-    cursor: pointer;
-    font-weight: bold;
-    border: 2px solid green;
-}
-
-#no-delete{
-    background-color: #d9534f;
-    padding: 8px 15px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border: 2px solid red;
+    right: 45px;
+    bottom: 5px;
 }
 
 
