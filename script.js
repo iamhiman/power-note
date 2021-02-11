@@ -1,4 +1,5 @@
 console.log("JS File linked");
+noteForm.reset();
 displayNotes();
 
 /********Utility Functions*******/
@@ -112,6 +113,9 @@ deleteAll.addEventListener("click",()=>{
   {
     navModalBg.classList.add("bg-active");
   }
+  else{
+    alert("Nothing to delete");
+  }
 });
 
 navDontDelete.addEventListener("click", function(){
@@ -156,4 +160,24 @@ function searchFunction()
       }
     }    
   }
+}
+
+
+/********Edit Function*******/
+function editNote(index)
+{
+  //console.log(index);
+  let selectedid = document.getElementById(index);
+  let cardContent = selectedid.previousElementSibling;
+  let titleContent = selectedid.previousElementSibling.previousElementSibling;
+
+  let noteTitle = document.getElementById("title");
+  let noteContent = document.getElementById("content");
+
+  noteTitle.value = titleContent.innerText;
+  noteContent.value = cardContent.innerText;
+  alert("Check Form to edit note and note will be deleted.");
+
+  deleteNote(index);
+ 
 }
