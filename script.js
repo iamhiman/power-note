@@ -36,8 +36,8 @@ function displayNotes() {
     html += `<div id="note-card" class="note-card">
               <p id="card-title"> ${element.title} </p>
               <p id="card-content"> ${element.content} </p>
-              <button type="submit" id="${index}" onclick="deleteNote(this.id)" class="card-del-button"><i class="fas fa-trash-alt"></i></button>
-              <button type="submit" id="${index}" onclick="editNote(this.id)" class="card-edit-button"><i class="fas fa-edit"></i></button>
+              <button type="submit" id="delete-${index}" onclick="deleteNote(this.id)" class="card-del-button"><i class="fas fa-trash-alt"></i></button>
+              <button type="submit" id="edit-${index}" onclick="editNote(this.id)" class="card-edit-button"><i class="fas fa-edit"></i></button>
            </div>`;
   });
 
@@ -84,12 +84,22 @@ addButton.addEventListener("click", () => {
 
 
 /********Delete Note Function*******/
-function deleteNote(index) {
-  checkStorage();
-
-  notesArray.splice(index, 1);
-  localStorage.setItem("notes", JSON.stringify(notesArray));
-  displayNotes();
+function deleteNote(index, flag = false) {
+  if (flag == true) {
+    checkStorage();
+    notesArray.splice(index, 1);
+    localStorage.setItem("notes", JSON.stringify(notesArray));
+    displayNotes();
+  }
+  else if (window.confirm("Are you sure you want to delete this note?")) {
+    checkStorage();
+    let str = index;
+    let matches = str.match(/(\d+)/);
+    let num = Number(matches[0]);
+    notesArray.splice(num, 1);
+    localStorage.setItem("notes", JSON.stringify(notesArray));
+    displayNotes();
+  }
 }
 
 
@@ -138,11 +148,14 @@ function searchFunction() {
 
 /********Edit Function*******/
 function editNote(index) {
-  //console.log(index);
   let selectedid = document.getElementById(index);
-  let cardContent = selectedid.previousElementSibling;
-  let titleContent = selectedid.previousElementSibling.previousElementSibling;
+  let str = index;
+  let matches = str.match(/(\d+)/);
+  let num = Number(matches[0]);
 
+  let cardContent = selectedid.previousElementSibling.previousElementSibling;
+  let titleContent = cardContent.previousElementSibling;
+  
   let noteTitle = document.getElementById("title");
   let noteContent = document.getElementById("content");
 
@@ -150,6 +163,5 @@ function editNote(index) {
   noteContent.value = cardContent.innerText;
   alert("Check Form to edit note and note will be deleted.");
 
-  deleteNote(index);
-
+  deleteNote(num, true);
 }

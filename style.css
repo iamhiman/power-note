@@ -8,6 +8,13 @@ html{
     overflow-x: hidden;
 }
 
+input,
+textarea,
+button,
+a{
+    outline: none;
+}
+
 /* ==================================================
                       Navbar
 ================================================== */
@@ -33,11 +40,6 @@ html{
 {
     font-weight: bold;
     font-size: 20px;
-}
-
-#search-input
-{
-    outline: none;
 }
 
 #delete-all-btn{
@@ -103,7 +105,6 @@ legend {
     width: 80%;
     margin-bottom: 10px;
     font-size: 18px;
-    outline: none;
 }
 
 .form-group textarea
@@ -112,7 +113,6 @@ legend {
     width: 80%;
     font-size: 18px;
     margin-bottom: 65px;
-    outline: none;
 }
 
 #add-note-btn
@@ -120,7 +120,6 @@ legend {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    outline: none;
     border: 2px solid green;
     background-color: #34bd34;
     color: #f7f7f7;
@@ -225,7 +224,6 @@ legend {
     width: 32px;
     font-size: 15px;
     border-radius: 50%;
-    outline: none;
     border: 1px solid red;
     position: absolute;
     right: 5px;
@@ -248,7 +246,6 @@ legend {
     width: 32px;
     font-size: 15px;
     border-radius: 50%;
-    outline: none;
     border: 1px solid blue ;
     position: absolute;
     right: 45px;
@@ -282,7 +279,6 @@ legend {
 .view-code a{
     text-decoration: none;
     color: #fff;
-    outline: none;
     font-size: 14px;
 }
 
